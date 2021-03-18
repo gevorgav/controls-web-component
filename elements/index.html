@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <title>Custom Element</title>
+</head>
+<body>
+<facebook-card
+  title="Custom Element"
+  name="Angular Web Component"
+  caption="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+  avtar="https://miro.medium.com/max/500/1*1Dx9Yl54R7EZ0Cr4w6TxlA.png"
+  image="https://miro.medium.com/max/552/1*snjd_2hX4TRFjPscD3zd5w.png"
+>
+  <!-- Using Content Projection in angular are like slots in web component stander -->
+  <i icon-like class="fa fa-thumbs-o-up like-icon"></i>
+  <i icon-comment class="fa fa-comment-o"></i>
+  <i icon-share class="fa fa-share"></i>
+</facebook-card>
+
+<facebook-card-2
+  title="Custom Element2"
+  name="Angular Web Component 2 "
+  caption="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+  avtar="https://miro.medium.com/max/500/1*1Dx9Yl54R7EZ0Cr4w6TxlA.png"
+  image="https://miro.medium.com/max/552/1*snjd_2hX4TRFjPscD3zd5w.png"
+>
+  <!-- Using Content Projection in angular are like slots in web component stander -->
+  <i icon-like class="fa fa-thumbs-o-up like-icon"></i>
+  <i icon-comment class="fa fa-comment-o"></i>
+  <i icon-share class="fa fa-share"></i>
+</facebook-card-2>
+
+<script>
+  /**
+   * Here you can interact with custome element using pure javascript
+   * You can Listen to built-in events as well as custome events
+   */
+  const el = document.querySelector('facebook-card');
+  el.addEventListener('likeNotify', e => {
+    console.log('Like Clicked');
+  });
+  el.addEventListener('shareNotify', e => {
+    console.log('Share Clicked');
+  });
+  el.addEventListener('commentNotify', e => {
+    console.log('Comment Clicked');
+  });
+</script>
+<script type="text/javascript" src="card-element.js"></script>
+</body>
+</html>
