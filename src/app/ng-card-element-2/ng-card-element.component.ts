@@ -12,7 +12,7 @@ import {
   styleUrls: ['./ng-card-element.component.css'],
   encapsulation: ViewEncapsulation.ShadowDom
 })
-export class NgCardElementComponent2 {
+export class NgCardElement2Component {
   @Input() title: string;
   @Input() name: string;
   @Input() time = new Date();

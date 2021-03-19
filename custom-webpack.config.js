@@ -1,9 +1,11 @@
-const BrotliPlugin = require(`brotli-webpack-plugin`);
+var BrotliPlugin = require('brotli-webpack-plugin');
 module.exports = {
-  plugins:[
+  plugins: [
     new BrotliPlugin({
-      asset: '[fileWithoutExt].[ext].br',
-      test: /\.(js|css|html|svg|txt|eot|otf|ttf|gif)$/
+      asset: '[path].br[query]',
+      test: /\.(js|css|html|svg)$/,
+      threshold: 10240,
+      minRatio: 0.8
     })
-  ],
+  ]
 }
