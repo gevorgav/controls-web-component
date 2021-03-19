@@ -3,12 +3,12 @@ import {Injector, NgModule} from '@angular/core';
 
 import {NgCardElementComponent} from './ng-card-element/ng-card-element.component';
 import {createCustomElement} from '@angular/elements';
-import {NgCardElementComponent2} from './ng-card-element-2/ng-card-element.component';
+import {NgCardElement2Component} from './ng-card-element-2/ng-card-element.component';
 
 @NgModule({
   imports: [BrowserModule],
-  declarations: [NgCardElementComponent, NgCardElementComponent2],
-  entryComponents: [NgCardElementComponent, NgCardElementComponent2]
+  declarations: [NgCardElementComponent, NgCardElement2Component],
+  entryComponents: [NgCardElementComponent, NgCardElement2Component]
 })
 export class AppModule {
   constructor(private injector: Injector) {
@@ -16,7 +16,7 @@ export class AppModule {
     const el = createCustomElement(NgCardElementComponent, {
       injector
     });
-    const el2 = createCustomElement(NgCardElementComponent2, {
+    const el2 = createCustomElement(NgCardElement2Component, {
       injector
     });
     // using built in the browser to create your own custome element name
